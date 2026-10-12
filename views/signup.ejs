@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sign Up</h1>
+    <div class="card">
+      <% if (error) { %>
+        <p style="color: red;"><%= error %></p>
+      <% } %>
+      <form action="/signup" method="POST">
+        <div class="form-group">
+          <label>User ID</label>
+          <input type="text" name="user_id" required placeholder="Choose a User ID">
+        </div>
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="name" required placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" name="password" required placeholder="Enter Password">
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn">Sign Up</button>
+          <a href="/signin" class="btn btn-secondary">Sign In</a>
+          <a href="/" class="btn btn-secondary">Back to Home</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
